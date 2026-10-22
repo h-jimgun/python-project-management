@@ -7,6 +7,8 @@ A Command-Line Interface (CLI) application built in Python to manage users, proj
 1. Clone the repository:
    ```bash
    git clone https://github.com/h-jimgun/python-project-management.git
+   
+   cd python-project-management
    ```
 
 2. Create and activate a virtual environment
@@ -19,6 +21,8 @@ A Command-Line Interface (CLI) application built in Python to manage users, proj
    ```bash
    pip install -r requirements.txt
    ```
+   
+
 
 ## CLI Commands
 1. Add a User
@@ -34,7 +38,7 @@ A Command-Line Interface (CLI) application built in Python to manage users, proj
 3. Add a Task to a project
    ```bash
    python main.py add-task --project "CLI Tool" --title "Implement add-task"
-    ```
+   ```
 
 4. List Project for a User
    ```bash

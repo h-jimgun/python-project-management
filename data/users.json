@@ -1,0 +1,46 @@
+[
+    {
+        "name": "Alex",
+        "email": "alex@example.com",
+        "projects": [
+            {
+                "id": 1,
+                "title": "CLI Tool",
+                "description": "Build",
+                "due_date": "2026-11-7",
+                "tasks": [
+                    {
+                        "title": "Finish the code",
+                        "status": "Pending",
+                        "assigned_to": "Unassigned"
+                    },
+                    {
+                        "title": "Write code",
+                        "status": "Pending",
+                        "assigned_to": "Peter"
+                    }
+                ]
+            },
+            {
+                "id": 2,
+                "title": "OOP",
+                "description": "Use OOP",
+                "due_date": "2026-11-21",
+                "tasks": []
+            }
+        ]
+    },
+    {
+        "name": "Star",
+        "email": "star@gmail.com",
+        "projects": [
+            {
+                "id": 1,
+                "title": "CLI Tool",
+                "description": "Build",
+                "due_date": "N/A",
+                "tasks": []
+            }
+        ]
+    }
+]
