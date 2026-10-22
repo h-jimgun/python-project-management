@@ -17,7 +17,7 @@ A Command-Line Interface (CLI) application built in Python to manage users, proj
    source venv/bin/activate
    ```
 
-3. Install dependancies
+3. Install dependencies
    ```bash
    pip install -r requirements.txt
    ```
@@ -25,40 +25,66 @@ A Command-Line Interface (CLI) application built in Python to manage users, proj
 
 
 ## CLI Commands
-1. Add a User
+1. Add a User:
    ```bash
-   python main.py add-user --name "Alex" --email "alex@example.com"
+   python main.py add-user --name "Axing" --email "axing@gmail.com"
    ```
 
-2. Add a project to user
+**Project Management**
+
+2. Add a project to user:
    ```bash
-   python main.py add-project --user "Alex" --title "CLI Tool" --description "Build a CLI" --due_date "2026-12-01"
+   python main.py add-project --user "Axing" --title "CLI Tool" --description "Build a CLI" --due_date "2026-12-01"
    ```
 
-3. Add a Task to a project
+3. Update a Project Details:
+   - *You can update the title, description, or due date*
    ```bash
-   python main.py add-task --project "CLI Tool" --title "Implement add-task"
+   python main.py update-project --user "Axing" --title "CLI Tool" --new_title "Advanced CLI" --new_description "Building a complex CLI tool"  --new_due_date "2026-12-31"
+   ```      
+
+4. Delete a project:
+   ```bash
+   python main.py delete-project --user "Axing" --title "Advanced CLI"
+   ```
+  
+5. List Projects for a User:
+   ```bash
+   python main.py list-projects --user "Axing"
+   ```
+ 
+**Task Management**
+
+6. Add a Task to a project:
+   *Tasks default to "Unassigned" if you don't use --assigned_to*
+   ```bash
+   python main.py add-task --user "Axing" --project "CLI Tool" --title "Implement add-task" --assigned_to "Sophie"
    ```
 
-4. List Project for a User
+7. Update a Task's Title or Assignee:
    ```bash
-   python main.py list-projects --user "Alex"
+   python main.py update-task --user "Axing" --project "CLI Tool" --old_title "Implement add-task" --new_title "Finish the code" --new_assigned_to "Maple"
    ```
 
-5. Complete a Task
+8. Mark a Task as Complete:
    ```bash
-   python main.py complete-task --project "CLI Tool" --task "Implement add-task"
+   python main.py complete-task --user "Axing" --project "CLI Tool" --task "Finish the code"
+   ```
+
+9. Delete a Task:
+   ```bash
+   python main.py delete-task --user "Axing" --project "CLI Tool" --task "Finish the code"
    ```
 
 ## Features and Overview
-- OOP Design: Uses Inheritance (Person -> User), Properties (@property and @setter for email validation), and Class Attributes (Project._id_counter).
+- **OOP Design:** Uses Inheritance (Person -> User), Properties (@property and @setter for email validation), and Class Attributes (Project._id_counter).
 
-- CLI Implementation: Utilizes Python's standard argparse module for subcommands.
+- **CLI Implementation:** Utilizes Python's standard argparse module for subcommands.
 
-- Persistence: Data is saved locally in data/users.json. Safely loads and handles missing files.
+- **Persistence:** Data is saved locally in data/users.json. Safely loads and handles missing files.
 
-- External Packages: Uses rich for printing formatted tables in the terminal.
+- **External Packages:** Uses rich for printing formatted tables in the terminal.
 
-- Code Structure: Separated into models/, utils/, and main.py for clean, modular code.
+- **Code Structure:** Separated into models/, utils/, and main.py for clean, modular code.
 
 
